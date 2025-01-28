@@ -257,6 +257,30 @@
 
         setInterval(drawMatrix, 50);
     </script>
+    <script>
+    // Disable right-click
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      alert("Right-click is disabled!");
+    });
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, etc.
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) || 
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+        alert("NengzX Prime");
+      }
+    });
+
+    // Disable dragging of text or images
+    document.addEventListener("dragstart", (e) => {
+      e.preventDefault();
+    });
+  </script>
   
  <script src="script.js"></script>
 
